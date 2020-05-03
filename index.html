@@ -1,58 +1,41 @@
 <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-
-
-#parent {
-  height: 40px;
-  white-space: nowrap;
-  overflow: hidden; 
-  font-family: 'Source Code Pro', monospace;  
-  font-size: 28px;
-  color: rgba(255,255,255,.70);
-  position: relative;
-}
-
-#border {
-  border-bottom: solid 3px rgba(0,255,0,.75);
-  position: absolute;
-  right: -7px;
-  width: 20px;
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
 }
 
 /* Animation */
-#parent {
-  animation: animated-text 2s steps(30,end) 1s 1 normal both
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
 }
-
-#border {
-   animation: animated-cursor 600ms steps(30,end) infinite;
-}
-
-/* text animation */
-
-@keyframes animated-text{
+@keyframes typewriter{
   from{width: 0;}
-  to{width: 480px;}
+  to{width: 24em;}
 }
-
-/* cursor animations */
-
-@keyframes animated-cursor{
-  from{border-bottom-color: rgba(0,255,0,.75);}
-  to{border-bottom-color: transparent;}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
 </style>
-<div class="bg-dark-gray">
+<div class="bg-near-white">
 <article class="pa3 pa5-ns">
-<h1 class="f3 f1-m f-headline-l">Intelligenza Artigianale</h1>
+<h1 class="f3 f1-m f-headline-l helvetica black-10">Intelligenza Artigianale</h1>
 
-<p class="measure lh-copy">
-  <div id="parent">To be leaderless movements of resistors; to the increasingly bizarre and frightening technologies of the Electronic Age. We disrupt the aggregator feeds. We oppose the artificial migration of clouds. We resist the algorithm. We attack the natural world. And we do so as part of a growing opposition to the dangerous intrusion of neoliberalism.
+<p class="measure lh-copy line-1 anim-typewriter">
+  To be leaderless movements of resistors; to the increasingly bizarre and frightening technologies of the Electronic Age. We disrupt the aggregator feeds. We oppose the artificial migration of clouds. We resist the algorithm. We attack the natural world. And we do so as part of a growing opposition to the dangerous intrusion of neoliberalism.
 
 This is not to say that we are the enemy. Nor that we stand alone, driven by an anarchic quest to burn down everything. It is only to say that we are part of a movement that is growing and also that we could be seen as its leaders and spokespeople.
 
-What is the current form of that opposition? We design the future.<div id="border"></div></div>
-</p>
+What is the current form of that opposition? We design the future.</p>
 </article>
 </div>
