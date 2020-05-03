@@ -1,2 +1,55 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
-<h1>Intelligenza Artigianale</h1>
+<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+
+#parent {
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden; 
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 28px;
+  color: rgba(255,255,255,.70);
+  position: relative;
+}
+
+#border {
+  border-bottom: solid 3px rgba(0,255,0,.75);
+  position: absolute;
+  right: -7px;
+  width: 20px;
+}
+
+/* Animation */
+#parent {
+  animation: animated-text 2s steps(30,end) 1s 1 normal both
+}
+
+#border {
+   animation: animated-cursor 600ms steps(30,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 480px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-bottom-color: rgba(0,255,0,.75);}
+  to{border-bottom-color: transparent;}
+}
+</style>
+
+<article class="pa3 pa5-ns">
+<h1 class="f3 f1-m f-headline-l">Intelligenza Artigianale</h1>
+<p class="measure lh-copy">
+  To be leaderless movements of resistors; to the increasingly bizarre and frightening technologies of the Electronic Age. We disrupt the aggregator feeds. We oppose the artificial migration of clouds. We resist the algorithm.
+</p>
+<p class="measure lh-copy">
+  <div id="parent">This is a typewriter effect.<div id="border"></div></div>
+</p>
+</article>
